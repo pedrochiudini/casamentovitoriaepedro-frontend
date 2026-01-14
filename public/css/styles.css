@@ -215,6 +215,7 @@ header {
   border-radius: 0.5rem;
   border-top: 5px solid #b3cee5;
   margin-top: 1.5rem;
+  margin-bottom: 4rem;
   color: #6d6966;
 
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
