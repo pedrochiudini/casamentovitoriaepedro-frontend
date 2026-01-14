@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário Confirmação</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script type="module" src="../src/js/blocopresenca.js"></script>
+    <script type="module" src="../src/js/acompanhantes.js"></script>
+    <script type="module" src="../src/js/form.js"></script>
+  </head>
+
+  <body>
+    <main class="container">
+      <header>
+        <span class="text-2 small w-300">THE WEDDING OF</span>
+        <h1 class="text-1 xl3 w-500">Vitória & Pedro</h1>
+        <h2 class="text-2 x-small w-400">27 DE NOVEMBRO DE 2027</h2>
+      </header>
+
+      <section id="local" class="font-archivo container">
+        <h1 class="text-2 large w-500 font-playfair color-1">Local</h1>
+        <h2 class="text-2 normal w-500 bold mt-14">
+          Pousada Paraíso Linha Nova Soder
+        </h2>
+        <h3 class="text-2 smaller w-400 mt-6">Linha Nova, Primeiro Distrito</h3>
+        <h3 class="text-2 smaller w-400 mt-6">Santa Cruz do Sul, RS</h3>
+        <a
+          class="text-2 smaller w-400 mt-14"
+          href="https://maps.app.goo.gl/qpHgE4QaNdzhPj6V9"
+          target="_blank"
+          >Localização</a
+        >
+      </section>
+
+      <section id="RSVP" class="font-archivo container">
+        <h1 class="text-2 xl2 w-400 font-playfair color-1">RSVP</h1>
+        <p class="smaller">Favor responder até dia 10 de Setembro de 2027</p>
+
+        <form
+          autocomplete="off"
+          id="form"
+          class="mt-14 text-2 w-300 smaller bold"
+        >
+          <div class="field">
+            <label>Nome Completo</label>
+            <input
+              class="mt-4"
+              type="text"
+              placeholder="Nome do Convidado"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label>E-mail</label>
+            <input
+              class="mt-4"
+              type="email"
+              placeholder="convidado@exemplo.com"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="tel">Telefone</label>
+            <input class="mt-4" type="tel" placeholder="(00) 00000-0000" />
+          </div>
+
+          <div class="field mt-14">
+            <label for="presenca">Estará presente no dia?</label>
+
+            <label class="radio mt-6">
+              <input id="presente" type="radio" name="presenca" required />
+              <span></span>
+              Estarei Presente
+            </label>
+
+            <label class="radio">
+              <input id="ausente" type="radio" name="presenca" />
+              <span></span>
+              Não Estarei Presente
+            </label>
+          </div>
+
+          <div id="bloco-presenca" class="recolhido">
+            <div class="field mt-10">
+              <label for="acompanhantes">Vai levar acompanhantes?</label>
+
+              <div class="row mt-6">
+                <label class="radio">
+                  <input id="acom-sim" type="radio" name="acompanhantes" />
+                  <span></span>
+                  Sim
+                </label>
+
+                <label class="radio">
+                  <input id="acom-nao" type="radio" name="acompanhantes" />
+                  <span></span>
+                  Não
+                </label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="qtd">Quantidade de Acompanhantes</label>
+              <span class="text-2 x-small w-400 mt-4"
+                >Informe o número de acompanhantes (Ex.: esposa, filho,
+                mãe...)</span
+              >
+              <input
+                id="qtd-acompanhantes"
+                class="mt-4"
+                type="number"
+                placeholder="Qtd de Acompanhantes"
+                disabled
+              />
+            </div>
+
+            <div class="field">
+              <label for="restricao">Restrição Alimentar</label>
+              <span class="text-2 x-small w-400 mt-4"
+                >Caso algum convidado possuir restrição alimentar</span
+              >
+              <input
+                class="mt-4"
+                type="text"
+                placeholder="Glúten, Lactose, Vegano..."
+              />
+            </div>
+          </div>
+
+          <button type="submit" id="btn-submit" class="btn-confirm font-playfair">
+            Enviar Formulário
+            <span class="icon">✈</span>
+          </button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
